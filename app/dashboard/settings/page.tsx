@@ -106,7 +106,7 @@ export default function SettingsPage() {
         ...notifications[type as keyof typeof notifications],
         [name]:
           !notifications[type as keyof typeof notifications][
-            name as keyof (typeof notifications)[keyof typeof notifications]
+          name as keyof (typeof notifications)[keyof typeof notifications]
           ],
       },
     })
@@ -332,8 +332,6 @@ export default function SettingsPage() {
                     <SelectContent>
                       <SelectItem value="english">English</SelectItem>
                       <SelectItem value="bangla">Bangla</SelectItem>
-                      <SelectItem value="french">French</SelectItem>
-                      <SelectItem value="spanish">Spanish</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>

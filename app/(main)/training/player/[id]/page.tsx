@@ -96,7 +96,7 @@ const COURSE_DATA = {
     },
   ],
   progress: 40,
-  languages: ["English", "Spanish", "French", "German"],
+  languages: ["English", "Bangla"],
 }
 
 // Mock quiz data
@@ -426,13 +426,12 @@ export default function TrainingPlayerPage({ params }: { params: { id: string } 
                         {question.options.map((option, oIndex) => (
                           <div
                             key={`${question.id}-option-${oIndex}`}
-                            className={`flex items-center space-x-2 p-2 rounded ${
-                              quizSubmitted && oIndex === question.correctAnswer
+                            className={`flex items-center space-x-2 p-2 rounded ${quizSubmitted && oIndex === question.correctAnswer
                                 ? "bg-green-50"
                                 : quizSubmitted && quizAnswers[qIndex] === oIndex && oIndex !== question.correctAnswer
                                   ? "bg-red-50"
                                   : ""
-                            }`}
+                              }`}
                           >
                             <RadioGroupItem value={oIndex.toString()} id={`${question.id}-option-${oIndex}`} />
                             <Label htmlFor={`${question.id}-option-${oIndex}`} className="flex-1">
@@ -648,22 +647,20 @@ export default function TrainingPlayerPage({ params }: { params: { id: string } 
                 {COURSE_DATA.modules.map((mod, index) => (
                   <div
                     key={mod.id}
-                    className={`p-3 rounded-md cursor-pointer flex items-center justify-between ${
-                      currentModule === index
+                    className={`p-3 rounded-md cursor-pointer flex items-center justify-between ${currentModule === index
                         ? "bg-inclusion-purple/10 border border-inclusion-purple/30"
                         : "hover:bg-muted"
-                    }`}
+                      }`}
                     onClick={() => setCurrentModule(index)}
                   >
                     <div className="flex items-center">
                       <div
-                        className={`w-6 h-6 rounded-full flex items-center justify-center mr-3 ${
-                          mod.completed
+                        className={`w-6 h-6 rounded-full flex items-center justify-center mr-3 ${mod.completed
                             ? "bg-green-100 text-green-600"
                             : currentModule === index
                               ? "bg-inclusion-purple/20 text-inclusion-purple"
                               : "bg-muted text-muted-foreground"
-                        }`}
+                          }`}
                       >
                         {mod.completed ? (
                           <CheckCircle className="h-4 w-4" />
