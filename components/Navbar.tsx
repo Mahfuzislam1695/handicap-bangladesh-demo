@@ -13,11 +13,12 @@ export function Navbar() {
                     <Link href="/">
                         <div className="flex items-center gap-2">
                             <Image
-                                src="/placeholder.svg?height=40&width=40"
+                                src="/handicap.png"
+                                // src="/placeholder.svg?height=40&width=40"
                                 alt="Humanity & Inclusion Logo"
-                                width={40}
-                                height={40}
-                                className="rounded"
+                                width={190}
+                                height={80}
+                                className="rounded h-14 w-auto"
                             />
                             <div className="flex flex-col">
                                 <span className="text-lg font-bold tracking-tight">Disability Inclusion Hub</span>
