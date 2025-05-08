@@ -77,7 +77,8 @@ export default function HomePage() {
               </div>
               <div className="flex items-center justify-center">
                 <Image
-                  src="/placeholder.svg?height=400&width=500"
+                  src="/ok.jpg"
+                  // src="/placeholder.svg?height=400&width=500"
                   alt="Disability inclusion in humanitarian context"
                   width={500}
                   height={400}
